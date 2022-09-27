@@ -1,0 +1,117 @@
+body {
+  font-family: Lora;
+  font-size: 18px;
+  line-height: 1.5; /*multiplier of the font size, therefore 18* 1.5 = 27px */
+  color: #ffffff;
+  background-image: url(background.svg); /*background image defaults to tile, in this case we want this effect */
+  max-width: 640px; /* using "max" is an easy way to make websites responsive from the start  */
+  /* by using auto margins we can center our content in the middle of page */
+  margin-left: auto;
+  margin-right: auto;
+  /* this creates space around the body so it's not directly on the top */
+  padding-top: 40px;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 40px; /* creating space around our header, pushing the edges of box away */
+}
+
+nav {
+  background-color: #f05d5d;
+  padding: 20px 40px 20px 40px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none; /*remove underline */
+  margin-right: 15px; /*space between links */
+}
+
+/*styles applied when hovering over links in nav */
+nav a:hover {
+  color: #5000ff;
+  border-bottom: 2px #ffffff solid;
+}
+
+section {
+  background-color: #5000ff;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.image {
+  /*styling sections with class image */
+  padding: 0; /*makes the image end to end of the width */
+}
+
+blockquote {
+  font-size: 32px;
+  line-height: 1.2;
+  font-style: italic;
+  
+  /*creating space between section above and below*/
+  margin-top: 40px; 
+  margin-bottom: 40px; 
+}
+
+.map {
+  width: 100%; /*stretches are our map image to the entire width of the section */
+}
+
+/*  paragarphs in contact class*/
+.contact p {
+  margin-top: 20px;
+}
+
+/* links in contact class*/
+.contact a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: solid 2px #f05d5d  ; /*creates a bottom border that's solid, 2px thick and red in color (note - order doesn't matter) */
+  padding-bottom: 1px; /*creates space between link and border  */
+}
+
+
+/*below screen width of 720px, apply the following styles */
+@media (max-width:720px) {
+  
+  section, header {
+    padding: 20px; /*reduced our padding on secitons and header*/
+    
+  }
+  
+  nav {
+    padding: 10px 20px 10px 20px; /*reduced our padding on nav */
+  }
+  
+  h2, blockquote {
+    font-size: 24px;
+  }
+  
+  body {
+    padding-top: 0; /*removes top padding completly */
+    font-size:  16px;
+  }
+  
+  blockquote {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+}
+
+@media (max-width:400px) {
+  
+  nav a{
+    display: block; /*this will force our navigation links to take up all the available widths and stack on top of eachother */
+  }
+  
+  nav a:hover {
+    border: none; /*removes border on mobile/tablet/touch devices */
+  }
+}
